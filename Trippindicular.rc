@@ -1,0 +1,622 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\Trippindicular.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Trippindicular.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Trippindicular...",    ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Trippindicular"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "Trippindicular, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_LAYER_PROPS DIALOGEX 0, 0, 250, 350
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_WINDOWEDGE
+CAPTION "Layer Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Colors",IDC_STATIC,7,7,236,36
+    LTEXT           "Foreground",IDC_STATIC,24,16,38,8
+    CONTROL         "",IDC_COLOR_FG,"Button",BS_OWNERDRAW | WS_TABSTOP,20,26,48,12,WS_EX_STATICEDGE
+    LTEXT           "Background",IDC_STATIC,142,16,38,8
+    CONTROL         "",IDC_COLOR_BG,"Button",BS_OWNERDRAW | WS_TABSTOP,138,25,48,12,WS_EX_STATICEDGE
+    GROUPBOX        "Argument Mode X",IDC_STATIC,7,57,236,56
+    LTEXT           "Freq",IDC_STATIC,16,81,16,8
+    COMBOBOX        IDC_ARGMODE_X_FREQ,36,78,55,59,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ARGMODE_X_BASE,153,78,55,57,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Base",IDC_STATIC,133,80,16,8
+    LTEXT           "Amp",IDC_STATIC,17,96,15,8
+    COMBOBOX        IDC_ARGMODE_X_AMP,36,94,55,57,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ARGMODE_X_PHASE,153,93,55,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Phase",IDC_STATIC,130,95,20,8
+    CONTROL         "Apply Wave",IDC_USE_SINE_X,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,67,55,10
+    GROUPBOX        "Argument Mode Y",IDC_STATIC,7,115,236,56
+    LTEXT           "Freq",IDC_STATIC,16,139,16,8
+    COMBOBOX        IDC_ARGMODE_Y_FREQ,36,136,55,58,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ARGMODE_Y_BASE,153,136,55,63,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Base",IDC_STATIC,133,138,16,8
+    LTEXT           "Amp",IDC_STATIC,17,154,15,8
+    COMBOBOX        IDC_ARGMODE_Y_AMP,36,152,55,64,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ARGMODE_Y_PHASE,153,151,55,64,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Phase",IDC_STATIC,130,152,20,8
+    CONTROL         "Apply Wave",IDC_USE_SINE_Y,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,125,55,10
+    GROUPBOX        "Argument Mode R",IDC_STATIC,7,171,236,56
+    LTEXT           "Freq",IDC_STATIC,16,195,16,8
+    COMBOBOX        IDC_ARGMODE_R_FREQ,36,192,55,63,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ARGMODE_R_BASE,153,192,55,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Base",IDC_STATIC,133,194,16,8
+    LTEXT           "Amp",IDC_STATIC,17,210,15,8
+    COMBOBOX        IDC_ARGMODE_R_AMP,36,208,55,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ARGMODE_R_PHASE,153,207,55,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Phase",IDC_STATIC,130,209,20,8
+    CONTROL         "Apply Wave",IDC_USE_SINE_R,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,181,55,10
+    GROUPBOX        "Argument Mode A",IDC_STATIC,7,229,236,56
+    LTEXT           "Freq",IDC_STATIC,16,253,16,8
+    COMBOBOX        IDC_ARGMODE_A_FREQ,36,250,55,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ARGMODE_A_BASE,153,250,55,61,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Base",IDC_STATIC,133,252,16,8
+    LTEXT           "Amp",IDC_STATIC,17,268,15,8
+    COMBOBOX        IDC_ARGMODE_A_AMP,36,266,55,61,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ARGMODE_A_PHASE,153,265,55,59,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Phase",IDC_STATIC,130,266,20,8
+    CONTROL         "Apply Wave",IDC_USE_SINE_A,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,239,55,10
+    EDITTEXT        IDC_ARGMODE_X_FREQ_VAL,94,77,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_X_AMP_VAL,94,93,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_X_BASE_VAL,212,77,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_X_PHASE_VAL,212,93,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_Y_FREQ_VAL,93,135,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_Y_AMP_VAL,93,151,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_Y_BASE_VAL,211,135,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_Y_PHASE_VAL,211,151,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_R_FREQ_VAL,93,191,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_R_AMP_VAL,93,207,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_R_BASE_VAL,211,191,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_R_PHASE_VAL,211,207,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_A_FREQ_VAL,93,249,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_A_AMP_VAL,93,265,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_A_BASE_VAL,211,249,31,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ARGMODE_A_PHASE_VAL,211,265,31,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Clear Texture",IDC_CLEAR_TEXTURE,7,329,59,14
+    PUSHBUTTON      "Clear Vertices",IDC_CLEAR_VERTS,184,329,59,14
+END
+
+IDD_FG_PROPS DIALOGEX 0, 0, 250, 350
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_WINDOWEDGE
+CAPTION "Foreground Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_FG_MODE,14,21,77,74,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Seeder",IDC_STATIC,7,7,236,77
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Trippindicular.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "Trippindicular.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_LAYER_PROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 343
+    END
+
+    IDD_FG_PROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 343
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_LAYER_PROPS DLGINIT
+BEGIN
+    IDC_ARGMODE_X_FREQ, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_X_FREQ, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_X_FREQ, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_X_FREQ, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_X_FREQ, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_X_BASE, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_X_BASE, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_X_BASE, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_X_BASE, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_X_BASE, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_X_AMP, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_X_AMP, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_X_AMP, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_X_AMP, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_X_AMP, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_X_PHASE, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_X_PHASE, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_X_PHASE, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_X_PHASE, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_X_PHASE, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_Y_FREQ, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_Y_FREQ, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_Y_FREQ, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_Y_FREQ, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_Y_FREQ, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_Y_BASE, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_Y_BASE, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_Y_BASE, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_Y_BASE, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_Y_BASE, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_Y_AMP, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_Y_AMP, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_Y_AMP, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_Y_AMP, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_Y_AMP, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_Y_PHASE, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_Y_PHASE, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_Y_PHASE, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_Y_PHASE, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_Y_PHASE, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_R_FREQ, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_R_FREQ, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_R_FREQ, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_R_FREQ, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_R_FREQ, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_R_BASE, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_R_BASE, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_R_BASE, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_R_BASE, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_R_BASE, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_R_AMP, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_R_AMP, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_R_AMP, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_R_AMP, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_R_AMP, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_R_PHASE, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_R_PHASE, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_R_PHASE, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_R_PHASE, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_R_PHASE, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_A_FREQ, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_A_FREQ, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_A_FREQ, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_A_FREQ, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_A_FREQ, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_A_BASE, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_A_BASE, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_A_BASE, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_A_BASE, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_A_BASE, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_A_AMP, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_A_AMP, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_A_AMP, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_A_AMP, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_A_AMP, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    IDC_ARGMODE_A_PHASE, 0x403, 7, 0
+0x6353, 0x6c61, 0x7261, "\000" 
+    IDC_ARGMODE_A_PHASE, 0x403, 6, 0
+0x2058, 0x6f70, 0x0073, 
+    IDC_ARGMODE_A_PHASE, 0x403, 6, 0
+0x2059, 0x6f70, 0x0073, 
+    IDC_ARGMODE_A_PHASE, 0x403, 7, 0
+0x6152, 0x6964, 0x7375, "\000" 
+    IDC_ARGMODE_A_PHASE, 0x403, 6, 0
+0x6e41, 0x6c67, 0x0065, 
+    0
+END
+
+IDD_FG_PROPS DLGINIT
+BEGIN
+    IDC_FG_MODE, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_FG_MODE, 0x403, 8, 0
+0x2d58, 0x694c, 0x656e, 0x0073, 
+    IDC_FG_MODE, 0x403, 14, 0
+0x6f52, 0x6174, 0x6974, 0x676e, 0x4c20, 0x6e69, 0x0065, 
+    IDC_FG_MODE, 0x403, 11, 0
+0x6f52, 0x6174, 0x6974, 0x676e, 0x5820, "\000" 
+    IDC_FG_MODE, 0x403, 15, 0
+0x6f42, 0x6e75, 0x6963, 0x676e, 0x4c20, 0x6e69, 0x7365, "\000" 
+    IDC_FG_MODE, 0x403, 7, 0
+0x7053, 0x7269, 0x6c61, "\000" 
+    IDC_FG_MODE, 0x403, 14, 0
+0x6542, 0x697a, 0x7265, 0x5320, 0x6f70, 0x656b, 0x0073, 
+    IDC_FG_MODE, 0x403, 12, 0
+0x7247, 0x6469, 0x5020, 0x696f, 0x746e, 0x0073, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Trippindicular"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Trippindicular"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\Trippindicular.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
